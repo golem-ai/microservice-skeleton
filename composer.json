@@ -1,0 +1,26 @@
+{
+  "type": "library",
+  "name": "golem-ai/microservice-skeleton",
+  "description": "Microservices core classes",
+  "homepage": "https://golem.ai",
+  "license": "proprietary",
+  "require": {
+    "php": ">=7.1.8",
+    "symfony/options-resolver": "4.*",
+    "symfony/serializer": "4.*",
+  },
+  "require-dev": {
+    "phpro/grumphp": "^0.14.2",
+    "phpunit/phpunit":  "^6",
+    "symfony/maker-bundle": "^1.11",
+    "symfony/var-dumper": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "GolemAi\\Microservice\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  }
+}
