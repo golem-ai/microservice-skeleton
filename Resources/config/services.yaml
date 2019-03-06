@@ -1,1 +1,10 @@
-services: ~
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    GolemAi\Microservice\RabbitMQ\DataTransformer\DataTransformerInterface: '@GolemAi\Microservice\RabbitMQ\DataTransformer\JsonTransformer'
+    GolemAi\Microservice\RabbitMQ\DataTransformer\JsonTransformer:
+        arguments:
+        - '@serializer'
