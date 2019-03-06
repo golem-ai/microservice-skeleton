@@ -8,3 +8,7 @@ services:
     GolemAi\Microservice\RabbitMQ\DataTransformer\JsonTransformer:
         arguments:
         - '@serializer'
+    GolemAi\Microservice\RabbitMQ\DataFormatter\DataFormatterInterface: '@GolemAi\Microservice\RabbitMQ\DataFormatter\DataFormatter'
+    GolemAi\Microservice\RabbitMQ\DataFormatter\DataFormatter:
+        arguments:
+            - '@GolemAi\Microservice\RabbitMQ\DataTransformer\DataTransformerInterface'
