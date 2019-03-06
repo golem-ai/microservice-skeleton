@@ -8,6 +8,7 @@
     "php": ">=7.1.8",
     "php-amqplib/rabbitmq-bundle": "^1.14",
     "symfony/options-resolver": "4.*",
+    "symfony/security": "4.*",
     "symfony/serializer": "4.*"
   },
   "require-dev": {

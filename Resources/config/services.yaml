@@ -11,4 +11,5 @@ services:
     GolemAi\Microservice\RabbitMQ\DataFormatter\DataFormatterInterface: '@GolemAi\Microservice\RabbitMQ\DataFormatter\DataFormatter'
     GolemAi\Microservice\RabbitMQ\DataFormatter\DataFormatter:
         arguments:
+            - '@security.token_storage'
             - '@GolemAi\Microservice\RabbitMQ\DataTransformer\DataTransformerInterface'
