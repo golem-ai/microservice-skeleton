@@ -37,7 +37,7 @@ class DataFormatter implements DataFormatterInterface
     public function format(array $data, array $options = []): string
     {
         $data = [
-            'user' => $this->tokenStorage->getToken()->getUser(),
+            'user' => null !== $this->tokenStorage->getToken() ? $this->tokenStorage->getToken()->getUser() : null,
             'data' => $data,
         ];
 
